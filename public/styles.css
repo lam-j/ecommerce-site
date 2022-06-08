@@ -87,23 +87,105 @@ img.user:hover {
 }
 
 /* ----- Header > Cart ----- */
+.cart-notification {
+    background-color: var(--orange);
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    height: 14px;
+    width: 18px;
+    text-align: center;
+    position: relative;
+    top: -12px;
+    left: 55px;
+}
+
 .cart-popup {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 15px 30px var(--grayishBlue);
     display: none;
     height: auto;
-    width: 300px;
+    width: 320px;
     position: absolute;
     top: 90px;
     right: 100px;
+    z-index: 2;
 }
 .cart-popup.active {
     display: grid;
 }
+.cart-popup > h4 {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.empty-cart {
+    font-weight: 700;
+    margin: 35px auto 50px;
+}
+/* need to edit scrollbar position & possibly style */
+.cart {
+    font-size: 14px;
+    margin: 0 20px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+.cart-item {
+    align-items: center;
+    display: flex;
+}
+.cart-item p {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+.cart-item span {
+    color: black;
+    font-weight: 700;
+}
+
+img.item-image {
+    border-radius: 5px;
+    margin-right: 15px;
+    height: 50px;
+    width: 50px;
+}
+.trashcan {
+    margin-left: auto;
+}
+
+.cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 20px 0;
+}
+.cart-subtotal > h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+.cart-subtotal > h4 > span {
+    color: var(--darkGrayishBlue);
+}
+h4.cart-subtotal-amount {
+    font-weight: 700;
+}
+
+button.cart-checkout {
+    background-color: var(--orange);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 700;
+    margin: 20px;
+    padding: 15px 0;
+}
 
 /* --------------- Product Page --------------- */
 .product-page {
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5%;
@@ -111,25 +193,65 @@ img.user:hover {
 }
 
 /* ----- Product Page > Images ----- */
-.full-images > img {
+.product-images {
+    max-width: 450px;
+}
+.full-images img {
     border-radius: 15px;
     height: 450px;
     width: 450px;
 }
 
 .thumbnails {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 50px;
-    width: 450px;
+    margin-top: 2rem;
+    text-align: center;
 }
-.thumbnails > img {
+.thumbnails img {
     border-radius: 10px;
-    height: 75px;
-    width: 75px;
+    height: 90px;
+    width: 90px;
+}
+
+/* ----- Product Page > Swiper Styles ----- */
+.thumbnails .swiper-slide:hover {
+    cursor: pointer;
+    opacity: 60%;
+}
+.lightbox .thumbnails .swiper-slide:hover {
+    opacity: 100%;
+    filter: brightness(110%);
+}
+
+.swiper-slide-thumb-active > img {
+    border: 3px solid var(--orange);
+    opacity: 50%;
+}
+.lightbox .swiper-slide-thumb-active > img {
+    opacity: 100%;
+    filter: grayscale(50%) brightness(120%);
 }
 
 /* ----- Product Page > Lightbox ----- */
+.lightbox-background {
+    background-color: var(--blackLightbox);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+.lightbox {
+    text-align: right;
+}
+.lightbox > button {
+    margin-bottom: 15px;
+}
+.lightbox > button:hover > svg {
+    fill: var(--orange);
+}
 
 /* ----- Product Page > Details ----- */
 p.designer {
