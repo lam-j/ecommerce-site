@@ -1,9 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header.jsx";
 
 function App() {
     const [cart, setCart] = useState([]);
+
+    useEffect(() => {
+        // Check if there are previously stored cart items
+        if (JSON.parse(localStorage.getItem("cart")) !== null) {
+            if (JSON.parse(localStorage.getItem("cart")).length > 0) {
+                setCart(JSON.parse(localStorage.getItem("cart")));
+            }
+        } else {
+            // if this is the first visit, create local storage
+            localStorage.setItem("cart", []);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
     function addToCart(name, price, quantity, image) {
         const isAlreadyInCart = cart.some((item) => item.name === name);
