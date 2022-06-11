@@ -35,35 +35,35 @@ button {
     cursor: pointer;
 }
 
-/* --------------- App --------------- */
+/* ------------------------------ App ------------------------------ */
 
 .App {
     /* border: 2px solid red; */
     margin: 2.5% 10%;
 }
 
-/* --------------- Header --------------- */
+/* ------------------------------ Header ------------------------------ */
 .header {
     align-items: center;
     display: flex;
     margin-bottom: 20px;
 }
 
-.navigation > ul {
+.nav-bar > ul {
     display: flex;
     list-style: none;
 }
-.navigation > ul > li {
+.nav-bar > ul > li {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
 }
-.navigation > ul > li > span {
+.nav-bar > ul > li > span {
     border-bottom: 3px solid white;
     position: relative;
     top: 36px;
 }
-.navigation > ul > li:hover > span {
+.nav-bar > ul > li:hover > span {
     border-bottom: 3px solid orange;
 }
 
@@ -183,7 +183,7 @@ button.cart-checkout {
     padding: 15px 0;
 }
 
-/* --------------- Product Page --------------- */
+/* ------------------------------ Product Page ------------------------------ */
 .product-page {
     align-items: center;
     display: grid;
@@ -336,4 +336,61 @@ p.original-price {
 }
 .add-to-cart > button:hover {
     opacity: 80%;
+}
+
+/* ------------------------------ Gallery ------------------------------ */
+.gallery-header > h2 {
+    font-weight: 400;
+}
+
+.gallery-and-filter-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-column-gap: 5%;
+    margin-top: 6%;
+    height: 100%;
+    width: 100%;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+.filter > a {
+    margin-bottom: 15px;
+}
+.filter > a.active {
+    color: black;
+    font-weight: 700;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 3%;
+    height: 50%;
+}
+.gallery-item {
+    cursor: pointer;
+    max-width: 250px;
+}
+.gallery-item > img {
+    height: 250px;
+    width: 250px;
+}
+
+.gallery-item-details > p {
+    color: black;
+}
+.gallery-item-details > .designer {
+    color: orange;
+}
+.gallery-item-details > .category {
+    color: var(--darkGrayishBlue);
+    opacity: 50%;
+}
+.gallery-item-details > p.price {
+    font-size: 14px;
 }

@@ -38,7 +38,7 @@ export default function Product(props) {
                 <div className="add-to-cart">
                     <div className="quantity">
                         <img
-                            src="./images/icon-minus.svg"
+                            src="/images/icon-minus.svg"
                             alt="minus"
                             onClick={() =>
                                 setQuantity((prev) => {
@@ -52,7 +52,7 @@ export default function Product(props) {
                         />
                         <h4>{quantity}</h4>
                         <img
-                            src="./images/icon-plus.svg"
+                            src="/images/icon-plus.svg"
                             alt="plus"
                             onClick={() =>
                                 setQuantity((prev) => {
@@ -74,7 +74,7 @@ export default function Product(props) {
                                 product.thumbnailImages[0]
                             )
                         }>
-                        <img src="./images/icon-cart-white.svg" alt="checkout-cart" />
+                        <img src="/images/icon-cart-white.svg" alt="checkout-cart" />
                         Add to cart
                     </button>
                 </div>

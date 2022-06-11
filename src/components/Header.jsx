@@ -25,9 +25,9 @@ export default function Header(props) {
     return (
         <div className="header">
             <a href="/">
-                <img className="logo" src="./images/logo.svg" alt="sneakers-logo" />
+                <img className="logo" src="/images/logo.svg" alt="sneakers-logo" />
             </a>
-            <div className="navigation">
+            <div className="nav-bar">
                 <ul>
                     <li>
                         <a href="/collections">Collections</a>
@@ -61,10 +61,10 @@ export default function Header(props) {
                             document.querySelector(".cart-popup").classList.add("active");
                         }
                     }}>
-                    <img className="cart" src="./images/icon-cart.svg" alt="cart" />
+                    <img className="cart" src="/images/icon-cart.svg" alt="cart" />
                 </button>
                 <button>
-                    <img className="user" src="./images/bag-on-head.png" alt="user" />
+                    <img className="user" src="/images/bag-on-head.png" alt="user" />
                 </button>
             </div>
             <div className="cart-popup">
@@ -96,7 +96,7 @@ export default function Header(props) {
                                         </p>
                                         <img
                                             className="trashcan"
-                                            src="./images/icon-delete.svg"
+                                            src="/images/icon-delete.svg"
                                             alt="delete"
                                             onClick={() => props.remove(product.name)}
                                         />

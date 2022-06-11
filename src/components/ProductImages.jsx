@@ -11,7 +11,6 @@ export default function Images(props) {
 
     function createImages() {
         if (props.isLightboxActive) {
-            console.log("hi");
             return (
                 // note: navigation buttons aren't showing for lightbox
                 <Swiper
