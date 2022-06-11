@@ -295,11 +295,13 @@ p.original-price {
 
 p.original-price {
     color: var(--grayishBlue);
+    margin-bottom: 0;
     text-decoration: line-through;
 }
 
 .add-to-cart {
     display: flex;
+    margin-top: 20px;
 }
 
 .quantity {

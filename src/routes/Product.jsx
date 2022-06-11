@@ -30,10 +30,14 @@ export default function Product(props) {
                 <p className="description">{product.description}</p>
                 <div className="pricing">
                     <h3 className="current-price">${product.currentPrice}</h3>
-                    <div className="discount">
-                        <p>{product.discount}%</p>
-                    </div>
-                    <p className="original-price">${product.originalPrice}</p>
+                    {product.discount !== "0" && (
+                        <>
+                            <div className="discount">
+                                <p>{product.discount}%</p>
+                            </div>
+                            <p className="original-price">${product.originalPrice}</p>
+                        </>
+                    )}
                 </div>
                 <div className="add-to-cart">
                     <div className="quantity">
