@@ -45,10 +45,6 @@ export default function Header(props) {
                         <a href="/about">About</a>
                         <span></span>
                     </li>
-                    <li>
-                        <a href="/contact">Contact</a>
-                        <span></span>
-                    </li>
                 </ul>
             </div>
             <div className="action-buttons">

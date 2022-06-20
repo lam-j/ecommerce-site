@@ -5,7 +5,6 @@ import App from "./App";
 import LandingPage from "./routes/LandingPage.jsx";
 import Collections from "./routes/Collections.jsx";
 import About from "./routes/About.jsx";
-import Contact from "./routes/Contact.jsx";
 import Product from "./routes/Product.jsx";
 import GalleryPage from "./routes/GalleryPage";
 
@@ -20,7 +19,6 @@ root.render(
                     <Route path="men" element={<GalleryPage />} />
                     <Route path="women" element={<GalleryPage />} />
                     <Route path="about" element={<About />} />
-                    <Route path="contact" element={<Contact />} />
                     <Route path="product/:productId" element={<Product />}></Route>
                     <Route path="men/:category" element={<GalleryPage />} />
                     <Route path="women/:category" element={<GalleryPage />} />

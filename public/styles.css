@@ -231,6 +231,11 @@ button.cart-checkout {
     filter: grayscale(50%) brightness(120%);
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: orange;
+}
+
 /* ----- Product Page > Lightbox ----- */
 .lightbox-background {
     background-color: var(--blackLightbox);
