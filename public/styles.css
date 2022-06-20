@@ -404,6 +404,7 @@ p.original-price {
 
 /* ------------------------------ Landing Page ------------------------------ */
 .landing-page {
+    position: relative;
     margin-top: 2%;
 }
 .landing-page > img {
