@@ -401,3 +401,76 @@ p.original-price {
 .gallery-item-details > p.price {
     font-size: 14px;
 }
+
+/* ------------------------------ Landing Page ------------------------------ */
+.landing-page {
+    margin-top: 2%;
+}
+.landing-page > img {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+}
+.landing-page > .hero-text {
+    position: absolute;
+    bottom: 275px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.landing-page > .hero-text > h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.landing-page > .hero-text > p {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.landing-page > .hero-text > a,
+.collection-text > a {
+    background-color: white;
+    color: black;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px;
+}
+
+/* ------------------------------ Collections ------------------------------ */
+
+.dropdown > .dropdown-content {
+    display: none;
+}
+.dropdown-content > p {
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+.dropdown.active > .dropdown-content {
+    display: block;
+}
+
+.dropdown-button {
+    cursor: pointer;
+}
+.collections {
+    display: flex;
+    flex-direction: column;
+}
+
+.collections img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.collection-text {
+    position: relative;
+    bottom: 260px;
+    text-align: center;
+}
+.collection-text > h1 {
+    color: white;
+}
